@@ -2,10 +2,8 @@ name: My First Github Action
 on: [push]
 jobs:
  build-app:
-    matrix:
-        go-version: 1.17
-        os: [ubuntu-latest, macos-latest]
+    runs-on: ubuntu-latest
     steps:
      - uses:actions/checkout@v2
-       run:tree
+     - run:tree
              
