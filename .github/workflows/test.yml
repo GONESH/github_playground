@@ -1,12 +1,20 @@
+# name: My First Github Action
+# on: [push]
+# jobs:
+#  print-hello-world:
+#    runs-on: ubuntu-latest
+#    steps:
+#     - run: echo 'Hello World!!'
+#  print-hello-world2:
+#    runs-on: ubuntu-latest
+#    steps:
+#     - run: echo 'Hello World!!'
+
 name: My First Github Action
 on: [push]
 jobs:
- print-hello-world:
+ build-app:
    runs-on: ubuntu-latest
    steps:
-    - run: echo 'Hello World!!'
- print-hello-world2:
-   runs-on: ubuntu-latest
-   steps:
-    - run: echo 'Hello World!!'
-     
+    - uses:actions/checkout@v2
+    - run:tree  
